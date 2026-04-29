@@ -1,0 +1,2 @@
+(this["webpackJsonpporto-seguro-migracao-de-canais"]=this["webpackJsonpporto-seguro-migracao-de-canais"]||[]).push([[50],{840:function(e,a,s){"use strict";s.r(a);var o=s(223),t=s(0);a.default=e=>e.submenus&&e.menu?Object(t.jsx)(o.a,{...e}):Object(t.jsx)("h2",{children:"Componente Layout Header"})}}]);
+//# sourceMappingURL=50.bf3baef7.chunk.js.map

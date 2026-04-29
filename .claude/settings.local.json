@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev)",
+      "Bash(npm run build)",
+      "Bash(npm install)",
+      "Bash(npx tsc *)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; cd \"c:\\\\Users\\\\FS RENTAL\\\\porto\"; node .\\\\node_modules\\\\.bin\\\\tsc --noEmit 2>&1 | Select-Object -First 40)",
+      "Bash(npm install *)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; cd \"c:\\\\Users\\\\FS RENTAL\\\\porto\"; npm install 2>&1 | Select-Object -Last 15)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; cd \"c:\\\\Users\\\\FS RENTAL\\\\porto\"; node .\\\\node_modules\\\\.bin\\\\tsc --noEmit 2>&1 | Select-Object -First 50)",
+      "PowerShell($env:PATH = \"C:\\\\Program Files\\\\nodejs;$env:PATH\"; cd \"c:\\\\Users\\\\FS RENTAL\\\\porto\"; npx tsc --noEmit 2>&1 | Select-Object -First 50)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}

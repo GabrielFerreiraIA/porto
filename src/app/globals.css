@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
-/* ── Porto Roobert substitute via Google Fonts ── */
-
 /* ── Design Tokens — Porto Seguro Saúde ── */
 :root {
   --porto-primary:        #0046c0;
@@ -53,86 +51,159 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', var(--font-inter), system-ui, sans-serif;
 }
 
-/* ── Porto mesh gradient hero ── */
-.porto-mesh-bg {
-  background:
-    radial-gradient(ellipse 80% 60% at 15% 40%, rgba(0, 51, 153, 0.45) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 80% at 85% 20%, rgba(0, 42, 122, 0.65) 0%, transparent 55%),
-    radial-gradient(ellipse 100% 100% at 50% 100%, rgba(0, 70, 192, 0.35) 0%, transparent 70%),
-    linear-gradient(135deg, #002a7a 0%, #003399 30%, #0046c0 65%, #1a6fe8 100%);
-  animation: portoMeshShift 14s ease-in-out infinite alternate;
+/* ── Porto Hero Gradient (exact design system) ── */
+.porto-hero-bg {
+  background: linear-gradient(135deg, #002a7a 0%, #003399 40%, #0046c0 100%);
 }
 
-@keyframes portoMeshShift {
-  0%   { background-position: 0% 50%, 100% 0%, 50% 100%, 0% 0%; }
-  100% { background-position: 100% 50%, 0% 100%, 50% 0%, 100% 100%; }
+/* ── Porto Buttons (exact design system: border-radius 8px) ── */
+.porto-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.porto-btn--white {
+  background: #ffffff;
+  color: #0046c0;
+}
+.porto-btn--white:hover {
+  background: #e6f0ff;
+  transform: translateY(-1px);
+}
+.porto-btn--outline-white {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+.porto-btn--outline-white:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.porto-btn--primary {
+  background: #0046c0;
+  color: #ffffff;
+}
+.porto-btn--primary:hover {
+  background: #003399;
+  transform: translateY(-1px);
+}
+.porto-btn--secondary {
+  background: transparent;
+  color: #0046c0;
+  border: 2px solid #0046c0;
+}
+.porto-btn--secondary:hover {
+  background: #e6f0ff;
 }
 
-/* ── Gradient border ── */
-.porto-gradient-border {
-  position: relative;
+/* ── Porto Card (systasi-card visual language) ── */
+.porto-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.porto-gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(135deg, #0046c0, #002a7a);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
+.porto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 70, 192, 0.12);
 }
-
-/* ── Card hover ── */
-.plan-card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+.porto-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
-.plan-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 70, 192, 0.15);
+.porto-card:hover .porto-card__img {
+  transform: scale(1.05);
 }
 
-/* ── CTA pulse ── */
-.cta-pulse {
-  animation: ctaPulse 2.5s ease-in-out infinite;
+/* ── Porto CTA Arrow (exact systasi-card__cta ::after pattern) ── */
+.porto-cta-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0046c0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
 }
-@keyframes ctaPulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(0, 70, 192, 0.4); }
-  50%       { box-shadow: 0 0 0 12px rgba(0, 70, 192, 0); }
+.porto-cta-arrow svg {
+  transition: transform 0.2s ease;
 }
-
-/* ── Form step transition ── */
-.form-step-enter {
-  animation: stepEnter 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-.form-step-exit {
-  animation: stepExit 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-@keyframes stepEnter {
-  from { opacity: 0; transform: translateX(32px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-@keyframes stepExit {
-  from { opacity: 1; transform: translateX(0); }
-  to   { opacity: 0; transform: translateX(-32px); }
+.porto-cta-arrow:hover svg {
+  transform: translateX(4px);
 }
 
-/* ── Section reveal (base state) ── */
-.section-reveal {
-  opacity: 0;
-  transform: translateY(32px);
+/* ── Porto Section Badge (caption style) ── */
+.porto-section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #0046c0;
+  background: #e6f0ff;
+  border: 1px solid rgba(0, 70, 192, 0.2);
+  border-radius: 100px;
+  padding: 6px 14px;
+  margin-bottom: 16px;
 }
 
-/* ── Noise texture overlay ── */
-.noise-overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  border-radius: inherit;
+/* ── Porto Input (8px radius, precise focus ring) ── */
+.porto-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 15px;
+  color: #1a1a1a;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+.porto-input::placeholder {
+  color: #9ca3af;
+}
+.porto-input:focus {
+  border-color: #0046c0;
+  box-shadow: 0 0 0 3px rgba(0, 70, 192, 0.12);
+}
+.porto-input--error {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+.porto-input--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
+}
+
+/* ── Porto Shimmer (exact systasi-skeleton) ── */
+@keyframes porto-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.porto-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: porto-shimmer 1.2s ease-in-out infinite;
+  border-radius: 4px;
 }
 
 /* ── Scroll progress bar ── */
@@ -172,7 +243,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Reduced motion ── */
 @media (prefers-reduced-motion: reduce) {
-  .porto-mesh-bg { animation: none; }
-  .cta-pulse     { animation: none; }
-  .section-reveal { opacity: 1; transform: none; }
+  .porto-card { transition: none; }
+  .porto-card:hover { transform: none; }
+  .porto-cta-arrow svg { transition: none; }
+  .porto-btn:hover { transform: none; }
 }

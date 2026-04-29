@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Porto Seguro Saúde — Design System</title>
+
+  <!-- Same CSS assets as the original -->
+  <link rel="stylesheet" href="assets/aY45_FWLo0XkEeJp_style_c63bb234ca3b.css"/>
+
+  <style>
+    /* ── Exact font-face declarations from original HTML ── */
+    @font-face {
+      font-family: 'Porto Roobert';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("assets/PortoRoobert-Medium_be78e24e29a7.otf"),
+           url("assets/PortoRoobert-Medium_be78e24e29a7.ttf");
+    }
+    @font-face {
+      font-family: 'Porto Roobert';
+      font-style: normal;
+      font-weight: 500;
+      font-display: swap;
+      src: url("assets/PortoRoobert-Medium_be78e24e29a7.otf"),
+           url("assets/PortoRoobert-Medium_be78e24e29a7.ttf");
+    }
+    @font-face {
+      font-family: 'Porto Roobert';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("assets/PortoRoobert-SemiBold_427f25c8ee52.otf"),
+           url("assets/PortoRoobert-SemiBold_5a69c36dfa82.ttf");
+    }
+    @font-face {
+      font-family: 'Porto Roobert';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url("assets/PortoRoobert-Bold_eccfc5662093.otf"),
+           url("assets/PortoRoobert-Bold_d255a2e31ee2.ttf");
+    }
+    @font-face {
+      font-family: 'icomoon';
+      src: url("assets/icomoon_cc035f0788b3.eot");
+      src: url("assets/icomoon_4c1a434f9798.eot") format('embedded-opentype'),
+           url("assets/icomoon_5540fd2e8644.ttf") format('truetype'),
+           url("assets/icomoon_bf4fca28ac4e.woff") format('woff'),
+           url("assets/icomoon_80683a3f5d86.svg") format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+    [class^="icon-"], [class*=" icon-"] {
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Design System page chrome ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --porto-blue:         #0046c0;
+      --porto-blue-dark:    #002a7a;
+      --porto-blue-hover:   #003399;
+      --porto-blue-light:   #e6f0ff;
+      --porto-text:         #1a1a1a;
+      --porto-muted:        #666666;
+      --porto-border:       #e0e0e0;
+      --porto-surface:      #ffffff;
+      --porto-surface-2:    #f7f9fc;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Porto Roobert', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--porto-text);
+      background: #f7f9fc;
+      line-height: 1.5;
+    }
+
+    /* Top nav */
+    .ds-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: white;
+      border-bottom: 1px solid var(--porto-border);
+      display: flex;
+      align-items: center;
+      gap: 0;
+      padding: 0 24px;
+      height: 52px;
+      overflow-x: auto;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .ds-nav__brand {
+      font-family: 'Porto Roobert', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--porto-blue);
+      margin-right: 24px;
+      flex-shrink: 0;
+      text-decoration: none;
+      letter-spacing: -0.2px;
+    }
+    .ds-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--porto-muted);
+      text-decoration: none;
+      padding: 0 14px;
+      height: 52px;
+      display: inline-flex;
+      align-items: center;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      flex-shrink: 0;
+    }
+    .ds-nav a:hover {
+      color: var(--porto-blue);
+      border-bottom-color: var(--porto-blue);
+    }
+
+    /* Section wrapper */
+    .ds-section {
+      padding: 64px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .ds-section + .ds-section { border-top: 1px solid var(--porto-border); }
+    .ds-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--porto-blue);
+      margin-bottom: 8px;
+    }
+    .ds-section-title {
+      font-family: 'Porto Roobert', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--porto-text);
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    /* ── SECTION 0: HERO ── */
+    #hero {
+      padding: 0;
+      max-width: 100%;
+    }
+    .hero-wrapper {
+      background: linear-gradient(135deg, var(--porto-blue-dark) 0%, var(--porto-blue) 100%);
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      width: 100%;
+    }
+    .hero-content {}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 100px;
+      padding: 6px 14px;
+      color: rgba(255,255,255,.9);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .hero-badge span.dot {
+      width: 7px;
+      height: 7px;
+      background: #4ade80;
+      border-radius: 50%;
+    }
+    .hero-h1 {
+      font-family: 'Porto Roobert', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: rgba(255,255,255,.75);
+      line-height: 1.6;
+      margin-bottom: 32px;
+      max-width: 440px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary-hero {
+      background: #ffffff;
+      color: var(--porto-blue);
+      font-family: 'Porto Roobert', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary-hero:hover { background: var(--porto-blue-light); transform: translateY(-1px); }
+    .btn-outline-hero {
+      background: transparent;
+      color: #ffffff;
+      font-family: 'Porto Roobert', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,.5);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline-hero:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+    .hero-image {
+      position: relative;
+    }
+    .hero-image img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 16px;
+      display: block;
+      box-shadow: 0 24px 60px rgba(0,0,0,.3);
+    }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; padding: 48px 24px; }
+      .hero-h1 { font-size: 32px; }
+      .hero-image { display: none; }
+    }
+
+    /* ── SECTION 1: TYPOGRAPHY ── */
+    .typo-table { width: 100%; border-collapse: collapse; }
+    .typo-table tr { border-bottom: 1px solid var(--porto-border); }
+    .typo-table tr:last-child { border-bottom: none; }
+    .typo-table td { padding: 20px 0; vertical-align: middle; }
+    .typo-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--porto-muted);
+      width: 120px;
+      padding-right: 20px;
+      vertical-align: middle;
+    }
+    .typo-preview { flex: 1; }
+    .typo-spec {
+      text-align: right;
+      font-size: 11px;
+      color: var(--porto-muted);
+      font-family: 'Courier New', monospace;
+      white-space: nowrap;
+      padding-left: 20px;
+      vertical-align: middle;
+    }
+    /* Exact Porto Roobert type scale */
+    .t-title-h1 { font-family:'Porto Roobert',sans-serif; font-size:48px; font-weight:700; line-height:1.1; color:var(--porto-text); }
+    .t-title-h2 { font-family:'Porto Roobert',sans-serif; font-size:32px; font-weight:700; line-height:1.2; color:var(--porto-text); }
+    .t-title-h3 { font-family:'Porto Roobert',sans-serif; font-size:24px; font-weight:700; line-height:1.3; color:var(--porto-text); }
+    .t-title-h4 { font-family:'Porto Roobert',sans-serif; font-size:20px; font-weight:500; line-height:1.4; color:var(--porto-text); }
+    .t-title-bold-l { font-family:'Porto Roobert',sans-serif; font-size:18px; font-weight:700; line-height:1.5; color:var(--porto-text); }
+    .t-title-bold-m { font-family:'Porto Roobert',sans-serif; font-size:16px; font-weight:600; line-height:1.4; color:var(--porto-text); }
+    .t-title-bold-s { font-family:'Porto Roobert',sans-serif; font-size:14px; font-weight:700; line-height:1.4; color:var(--porto-text); letter-spacing:.3px; }
+    .t-body     { font-size:16px; font-weight:400; line-height:1.5; color:var(--porto-text); }
+    .t-body-s   { font-size:14px; font-weight:400; line-height:1.5; color:var(--porto-muted); }
+    .t-caption  { font-size:12px; font-weight:600; line-height:1.4; color:var(--porto-muted); text-transform:uppercase; letter-spacing:.3px; }
+    /* systasi-title matches from widget CSS */
+    .systasi-title-preview { font-family:'Porto Roobert',sans-serif; font-size:24px; font-weight:500; line-height:1.2; color:var(--porto-text); }
+
+    /* ── SECTION 2: COLORS ── */
+    .color-grid { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
+    .color-swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+    }
+    .color-box {
+      width: 96px;
+      height: 80px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,.08);
+    }
+    .color-hex { font-size: 12px; font-family:'Courier New',monospace; font-weight:600; color:var(--porto-text); }
+    .color-name { font-size: 11px; color:var(--porto-muted); }
+    .surface-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .surface-card {
+      border-radius: 12px;
+      padding: 24px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 4px;
+    }
+    .surface-card-label { font-size: 13px; font-weight: 600; }
+    .surface-card-desc { font-size: 11px; opacity: .7; }
+
+    /* ── SECTION 3: COMPONENTS ── */
+    .component-block { margin-bottom: 48px; }
+    .component-block-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: var(--porto-muted);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--porto-border);
+    }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+    /* Exact button styles from Porto (reconstructed from brand) */
+    .porto-btn {
+      font-family: 'Porto Roobert', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .porto-btn--primary {
+      background: var(--porto-blue);
+      color: #fff;
+    }
+    .porto-btn--primary:hover { background: var(--porto-blue-hover); transform: translateY(-1px); }
+    .porto-btn--secondary {
+      background: transparent;
+      color: var(--porto-blue);
+      border: 2px solid var(--porto-blue);
+    }
+    .porto-btn--secondary:hover { background: var(--porto-blue-light); }
+    .porto-btn--ghost {
+      background: transparent;
+      color: var(--porto-blue);
+      border: 2px solid transparent;
+    }
+    .porto-btn--ghost:hover { background: var(--porto-blue-light); }
+    .porto-btn--disabled {
+      background: var(--porto-blue);
+      color: #fff;
+      opacity: .4;
+      cursor: not-allowed;
+    }
+    .btn-state-label {
+      font-size: 11px;
+      color: var(--porto-muted);
+      text-align: center;
+      margin-top: 4px;
+    }
+    .btn-with-label { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+
+    /* Navigation buttons — exact .systasi-nav__btn from widget CSS */
+    .nav-btn-row { display: flex; gap: 8px; }
+
+    /* ── SECTION 4: LAYOUT ── */
+    .layout-demo {
+      border: 1px solid var(--porto-border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+    .layout-demo-label {
+      background: var(--porto-surface-2);
+      border-bottom: 1px solid var(--porto-border);
+      padding: 8px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--porto-muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .layout-demo-inner { padding: 24px; }
+    .layout-col { background: var(--porto-blue-light); border: 1px dashed var(--porto-blue); border-radius: 6px; padding: 16px; text-align: center; font-size: 12px; color: var(--porto-blue); font-weight: 600; }
+    .spacing-scale { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+    .spacing-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .spacing-bar { background: var(--porto-blue); border-radius: 3px; width: 36px; }
+    .spacing-label { font-size: 11px; color: var(--porto-muted); font-family:'Courier New',monospace; text-align:center; }
+
+    /* ── SECTION 5: MOTION ── */
+    .motion-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+    .motion-card {
+      background: var(--porto-surface);
+      border: 1px solid var(--porto-border);
+      border-radius: 12px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .motion-card-title { font-size: 13px; font-weight: 700; color: var(--porto-text); }
+    .motion-card-spec { font-size: 11px; font-family:'Courier New',monospace; color: var(--porto-blue); background: var(--porto-blue-light); padding: 3px 8px; border-radius: 4px; width: fit-content; }
+    .motion-demo { display: flex; align-items: center; justify-content: center; height: 60px; }
+
+    /* Exact shimmer from .systasi-skeleton */
+    .demo-shimmer {
+      width: 100%;
+      height: 12px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: systasi-shimmer 1.2s infinite ease-in-out;
+      border-radius: var(--systasi-radius-sm);
+    }
+    .demo-hover-lift {
+      background: var(--porto-blue-light);
+      border: 1px solid var(--porto-blue);
+      border-radius: 10px;
+      padding: 12px 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--porto-blue);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .demo-hover-lift:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,70,192,.15); }
+    .demo-cta-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--systasi-accent, #0046c0);
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+    /* Exact ::after arrow from .systasi-card__cta */
+    .demo-cta-arrow::after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230046c0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: transform 0.2s ease;
+    }
+    .demo-cta-arrow:hover::after { transform: translateX(4px); }
+
+    /* ── SECTION 6: ICONS ── */
+    .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px,1fr)); gap: 16px; }
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 12px 4px;
+      border-radius: 8px;
+      transition: background 0.15s;
+    }
+    .icon-item:hover { background: var(--porto-blue-light); }
+    .icon-item span[class^="icon-"] { font-size: 24px; color: var(--porto-blue); }
+    .icon-item .icon-name { font-size: 9px; color: var(--porto-muted); text-align:center; word-break: break-all; line-height:1.3; }
+    .icon-size-demo { display: flex; align-items: flex-end; gap: 20px; flex-wrap: wrap; }
+    .icon-size-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .icon-size-label { font-size: 11px; color: var(--porto-muted); font-family:'Courier New',monospace; }
+  </style>
+</head>
+<body>
+
+<!-- ─────────────────────────────────────────
+     TOP NAV
+───────────────────────────────────────── -->
+<nav class="ds-nav">
+  <a class="ds-nav__brand" href="#hero">Porto Saúde · Design System</a>
+  <a href="#hero">0 · Hero</a>
+  <a href="#typography">1 · Typography</a>
+  <a href="#colors">2 · Colors</a>
+  <a href="#components">3 · Components</a>
+  <a href="#layout">4 · Layout</a>
+  <a href="#motion">5 · Motion</a>
+  <a href="#icons">6 · Icons</a>
+</nav>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 0 — HERO (Exact Clone, Text Adapted)
+     Same HTML structure, same layout, same images,
+     same buttons. Only hero text content changed.
+───────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-wrapper" data-testid="section-banner-hero">
+    <div class="hero-inner" data-testid="SectionBannerHero">
+      <!-- Left column: text + CTAs -->
+      <div class="hero-content" data-testid="BannerBodyContainer">
+        <!-- Animated badge (same green pulse present in original) -->
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Design System · Componentes e Tokens Porto Saúde
+        </div>
+
+        <!-- H1 — same element, same hierarchy, adapted text -->
+        <h1 class="hero-h1" data-testid="typography-container" type="Title2">
+          Design System Porto Seguro Saúde
+        </h1>
+
+        <!-- Subtitle — same <p> structure as original -->
+        <p class="hero-sub" data-testid="BannerBody">
+          Tokens de design, componentes e padrões visuais que constroem a identidade da Porto Saúde.
+        </p>
+
+        <!-- CTA buttons — same structure: primary + secondary -->
+        <div class="hero-actions" data-testid="banner-body-section">
+          <button class="btn-primary-hero" aria-label="Ir para Componentes">
+            <span>Ver Componentes</span>
+          </button>
+          <button class="btn-outline-hero" aria-label="Ir para Tokens">
+            <span>Ver Tokens</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right column: same image as original hero -->
+      <div class="hero-image" aria-hidden="true">
+        <img
+          src="assets/bh-saude-institucional_036a217aca6f.webp"
+          alt="Médico do time PortoSaúde usando celular, vestindo jaleco branco com estetoscópio no pescoço."
+          loading="eager"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 1 — TYPOGRAPHY
+───────────────────────────────────────── -->
+<div id="typography" style="background:#fff;">
+  <div class="ds-section">
+    <p class="ds-section-label">1</p>
+    <h2 class="ds-section-title">Typography</h2>
+
+    <table class="typo-table">
+      <tbody>
+        <tr>
+          <td class="typo-label">Title 2 / H1</td>
+          <td class="typo-preview">
+            <h1 class="t-title-h1">O porto seguro para a saúde da sua empresa</h1>
+          </td>
+          <td class="typo-spec">48px / 52px · 700</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Title 4 / H2</td>
+          <td class="typo-preview">
+            <h2 class="t-title-h2">Soluções para a sua empresa</h2>
+          </td>
+          <td class="typo-spec">32px / 38px · 700</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Title 6 / H3</td>
+          <td class="typo-preview">
+            <h3 class="t-title-h3">Seguro Saúde Empresarial</h3>
+          </td>
+          <td class="typo-spec">24px / 31px · 700</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Title / H4</td>
+          <td class="typo-preview">
+            <h4 class="t-title-h4">Atendimento 24 horas e cobertura nacional</h4>
+          </td>
+          <td class="typo-spec">20px / 28px · 500</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Widget Title<br><small>(systasi-title)</small></td>
+          <td class="typo-preview">
+            <p class="systasi-title systasi-title-preview">Recomendado para você</p>
+          </td>
+          <td class="typo-spec">24px→32px / 1.2 · 500</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Bold L</td>
+          <td class="typo-preview">
+            <p class="t-title-bold-l">A Porto Saúde oferece um ecossistema completo</p>
+          </td>
+          <td class="typo-spec">18px / 27px · 700</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Bold M<br><small>(card__name)</small></td>
+          <td class="typo-preview">
+            <p class="t-title-bold-m systasi-card__name" style="overflow:visible;-webkit-line-clamp:unset;">Plano de Saúde para Empresas com Cobertura Nacional</p>
+          </td>
+          <td class="typo-spec">16px / 1.4 · 600</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Bold S<br><small>(category)</small></td>
+          <td class="typo-preview">
+            <span class="t-title-bold-s systasi-card__category">SEGURO SAÚDE · EMPRESAS</span>
+          </td>
+          <td class="typo-spec">12px / 1 · 600 uppercase</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Body</td>
+          <td class="typo-preview">
+            <p class="t-body">A Porto Saúde garante o atendimento 24 horas, assistência em viagens, atendimento nacional de urgência e emergência para os colaboradores de sua empresa.</p>
+          </td>
+          <td class="typo-spec">16px / 1.5 · 400</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Body S<br><small>(muted)</small></td>
+          <td class="typo-preview">
+            <p class="t-body-s">Regulado pela ANS · CNPJ 04.540.010/0001-70</p>
+          </td>
+          <td class="typo-spec">14px / 1.5 · 400 muted</td>
+        </tr>
+        <tr>
+          <td class="typo-label">Caption<br><small>(badge/label)</small></td>
+          <td class="typo-preview">
+            <span class="t-caption">plano empresarial</span>
+          </td>
+          <td class="typo-spec">12px / 1.4 · 600 uppercase</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 2 — COLORS & SURFACES
+───────────────────────────────────────── -->
+<div id="colors" style="background:#f7f9fc;">
+  <div class="ds-section">
+    <p class="ds-section-label">2</p>
+    <h2 class="ds-section-title">Colors &amp; Surfaces</h2>
+
+    <!-- Brand palette -->
+    <p style="font-size:13px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px;">Brand Palette</p>
+    <div class="color-grid" style="margin-bottom:40px;">
+      <div class="color-swatch">
+        <div class="color-box" style="background:#0046c0;"></div>
+        <div class="color-hex">#0046c0</div>
+        <div class="color-name">Primary<br>(--systasi-accent)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#003399;"></div>
+        <div class="color-hex">#003399</div>
+        <div class="color-name">Primary Hover<br>(--systasi-accent-hover)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#e6f0ff;border:1px solid #c5d9f9;"></div>
+        <div class="color-hex">#e6f0ff</div>
+        <div class="color-name">Accent Light<br>(--systasi-accent-light)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:linear-gradient(135deg,#002a7a,#0046c0,#1a6fe8);"></div>
+        <div class="color-hex">Gradient</div>
+        <div class="color-name">Hero BG<br>#002a7a → #0046c0</div>
+      </div>
+    </div>
+
+    <!-- Neutral palette -->
+    <p style="font-size:13px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px;">Neutral Palette</p>
+    <div class="color-grid" style="margin-bottom:40px;">
+      <div class="color-swatch">
+        <div class="color-box" style="background:#1a1a1a;"></div>
+        <div class="color-hex">#1a1a1a</div>
+        <div class="color-name">Text<br>(--systasi-text)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#666666;"></div>
+        <div class="color-hex">#666666</div>
+        <div class="color-name">Muted<br>(--systasi-text-muted)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#e0e0e0;"></div>
+        <div class="color-hex">#e0e0e0</div>
+        <div class="color-name">Border<br>(--systasi-border)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#ffffff;border:1px solid #e0e0e0;"></div>
+        <div class="color-hex">#ffffff</div>
+        <div class="color-name">Surface<br>(--systasi-bg)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#f0f0f0;"></div>
+        <div class="color-hex">#f0f0f0</div>
+        <div class="color-name">Skeleton Base<br>(--systasi-skeleton-base)</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:rgba(0,0,0,0.6);"></div>
+        <div class="color-hex">rgba(0,0,0,.6)</div>
+        <div class="color-name">Overlay<br>(modal backdrop)</div>
+      </div>
+    </div>
+
+    <!-- Dark theme -->
+    <p style="font-size:13px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px;">Dark Theme (systasi-theme-dark)</p>
+    <div class="color-grid" style="margin-bottom:40px;">
+      <div class="color-swatch">
+        <div class="color-box" style="background:#0d1117;border:none;"></div>
+        <div class="color-hex">#0d1117</div>
+        <div class="color-name">BG Dark</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#161b22;border:none;"></div>
+        <div class="color-hex">#161b22</div>
+        <div class="color-name">Card Dark</div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-box" style="background:#58a6ff;border:none;"></div>
+        <div class="color-hex">#58a6ff</div>
+        <div class="color-name">Accent Dark</div>
+      </div>
+    </div>
+
+    <!-- Surface examples -->
+    <p style="font-size:13px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px;">Surfaces</p>
+    <div class="surface-grid">
+      <div class="surface-card" style="background:#ffffff;border:1px solid #e0e0e0;box-shadow:0 2px 8px rgba(0,0,0,.06);">
+        <div class="surface-card-label" style="color:#1a1a1a;">Page / Card</div>
+        <div class="surface-card-desc" style="color:#666;">.systasi-bg · .systasi-bg-card</div>
+      </div>
+      <div class="surface-card" style="background:#0046c0;">
+        <div class="surface-card-label" style="color:#fff;">Hero Gradient</div>
+        <div class="surface-card-desc" style="color:rgba(255,255,255,.7);">#002a7a → #0046c0</div>
+      </div>
+      <div class="surface-card" style="background:#0d1117;border:1px solid #30363d;">
+        <div class="surface-card-label" style="color:#f0f0f0;">Dark Surface</div>
+        <div class="surface-card-desc" style="color:#8b949e;">.systasi-theme-dark</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 3 — UI COMPONENTS
+───────────────────────────────────────── -->
+<div id="components" style="background:#fff;">
+  <div class="ds-section">
+    <p class="ds-section-label">3</p>
+    <h2 class="ds-section-title">UI Components</h2>
+
+    <!-- 3a. Buttons -->
+    <div class="component-block">
+      <p class="component-block-title">Buttons · Hero CTAs</p>
+      <div class="btn-row">
+        <div class="btn-with-label">
+          <button class="btn-primary-hero">Solicite uma cotação</button>
+          <div class="btn-state-label">Primary / Default</div>
+        </div>
+        <div class="btn-with-label">
+          <button class="btn-outline-hero">Sou beneficiário</button>
+          <div class="btn-state-label">Outline / Secondary</div>
+        </div>
+        <div class="btn-with-label">
+          <button class="porto-btn porto-btn--primary">Quero minha cotação</button>
+          <div class="btn-state-label">Primary · Light BG</div>
+        </div>
+        <div class="btn-with-label">
+          <button class="porto-btn porto-btn--secondary">Ver planos</button>
+          <div class="btn-state-label">Secondary</div>
+        </div>
+        <div class="btn-with-label">
+          <button class="porto-btn porto-btn--ghost">Saiba mais</button>
+          <div class="btn-state-label">Ghost</div>
+        </div>
+        <div class="btn-with-label">
+          <button class="porto-btn porto-btn--disabled" disabled>Indisponível</button>
+          <div class="btn-state-label">Disabled (opacity .4)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3b. Nav buttons (exact .systasi-nav__btn) -->
+    <div class="component-block">
+      <p class="component-block-title">Navigation Buttons · .systasi-nav__btn</p>
+      <p style="font-size:13px;color:#666;margin-bottom:16px;">Carousel navigation arrows — 40×40px circle, hover: accent-light bg + accent border</p>
+      <div class="nav-btn-row">
+        <button class="systasi-nav__btn" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="systasi-nav__btn" aria-label="Próximo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button class="systasi-nav__btn systasi-nav__btn--disabled" disabled aria-label="Disabled">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- 3c. Cards — Horizontal grid (exact .systasi-card) -->
+    <div class="component-block">
+      <p class="component-block-title">Cards · Horizontal Grid · .systasi-grid + .systasi-card</p>
+      <div class="systasi-widget">
+        <div class="systasi-grid">
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <img class="systasi-card__img" src="assets/bh-saude-institucional-3_7791a6b47072.webp" alt="Seguro Saúde"/>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <span class="systasi-card__category">Seguro Saúde</span>
+                <p class="systasi-card__name">Porto Saúde Empresarial para PME</p>
+              </div>
+              <button class="systasi-card__cta">Ver plano</button>
+            </div>
+          </a>
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <img class="systasi-card__img" src="assets/saude-100_e31b19e58a42.webp" alt="Porto Saúde"/>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <span class="systasi-card__category">Saúde Individual</span>
+                <p class="systasi-card__name">Porto Saúde Individual e Familiar</p>
+              </div>
+              <button class="systasi-card__cta">Ver plano</button>
+            </div>
+          </a>
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <img class="systasi-card__img" src="assets/saude-101_9f60b24df2d7.webp" alt="Porto Dental"/>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <span class="systasi-card__category">Dental</span>
+                <p class="systasi-card__name">Porto Saúde Plano Odontológico</p>
+              </div>
+              <button class="systasi-card__cta">Ver plano</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3d. Cards — Vertical carousel (exact .systasi-grid--carousel) -->
+    <div class="component-block">
+      <p class="component-block-title">Cards · Vertical Carousel · .systasi-grid--carousel</p>
+      <div class="systasi-widget">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0;">
+          <p class="systasi-title">Soluções para a sua empresa</p>
+          <div class="systasi-nav">
+            <button class="systasi-nav__btn systasi-nav__btn--disabled" disabled aria-label="Anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="systasi-nav__btn" aria-label="Próximo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="systasi-grid systasi-grid--carousel">
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <img class="systasi-card__img" src="assets/bh-saude-institucional-3_7791a6b47072.webp" alt="Seguro Saúde"/>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <div class="systasi-card__badges">
+                  <span class="systasi-badge">Empresarial</span>
+                </div>
+                <p class="systasi-card__name">Seguro Saúde para Empresas</p>
+              </div>
+              <div class="systasi-card__price">
+                <span class="systasi-card__price-prefix">A partir de</span>
+                <span class="systasi-card__price-current">Consulte</span>
+              </div>
+              <button class="systasi-card__cta">Solicitar cotação</button>
+            </div>
+          </a>
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <img class="systasi-card__img" src="assets/saude-100_e31b19e58a42.webp" alt="Porto Saúde Individual"/>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <div class="systasi-card__badges">
+                  <span class="systasi-badge">Individual</span>
+                </div>
+                <p class="systasi-card__name">Porto Saúde Individual e Familiar</p>
+              </div>
+              <div class="systasi-card__price">
+                <span class="systasi-card__price-prefix">A partir de</span>
+                <span class="systasi-card__price-current">Consulte</span>
+              </div>
+              <button class="systasi-card__cta">Solicitar cotação</button>
+            </div>
+          </a>
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <img class="systasi-card__img" src="assets/saude-101_9f60b24df2d7.webp" alt="Porto Dental"/>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <div class="systasi-card__badges">
+                  <span class="systasi-badge">Dental</span>
+                </div>
+                <p class="systasi-card__name">Plano Odontológico Porto Seguro</p>
+              </div>
+              <div class="systasi-card__price">
+                <span class="systasi-card__price-prefix">A partir de</span>
+                <span class="systasi-card__price-current">Consulte</span>
+              </div>
+              <button class="systasi-card__cta">Solicitar cotação</button>
+            </div>
+          </a>
+          <a class="systasi-card" href="#" tabindex="0">
+            <div class="systasi-card__image">
+              <div class="systasi-card__img-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              </div>
+            </div>
+            <div class="systasi-card__content">
+              <div class="systasi-card__info">
+                <div class="systasi-card__badges">
+                  <span class="systasi-badge">Ocupacional</span>
+                </div>
+                <p class="systasi-card__name">Saúde Ocupacional e Segurança do Trabalho</p>
+              </div>
+              <div class="systasi-card__price">
+                <span class="systasi-card__price-prefix">A partir de</span>
+                <span class="systasi-card__price-current">Consulte</span>
+              </div>
+              <button class="systasi-card__cta">Solicitar cotação</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3e. Badges -->
+    <div class="component-block">
+      <p class="component-block-title">Badges · .systasi-badge</p>
+      <p style="font-size:13px;color:#666;margin-bottom:16px;">All variants use the same white/border Porto style</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="systasi-badge">Empresarial</span>
+        <span class="systasi-badge systasi-badge--primary">Saúde</span>
+        <span class="systasi-badge systasi-badge--success">Individual</span>
+        <span class="systasi-badge systasi-badge--warning">Dental</span>
+        <span class="systasi-badge systasi-badge--danger">Ocupacional</span>
+      </div>
+    </div>
+
+    <!-- 3f. Skeleton -->
+    <div class="component-block">
+      <p class="component-block-title">Skeleton / Loading · .systasi-skeleton · .systasi-skel-*</p>
+      <div class="systasi-widget" style="max-width:640px;">
+        <div class="systasi-grid">
+          <div class="systasi-skel-card">
+            <div class="systasi-skel-img systasi-skeleton"></div>
+            <div class="systasi-skel-lines">
+              <div class="systasi-skel-line systasi-skeleton"></div>
+              <div class="systasi-skel-line short systasi-skeleton"></div>
+              <div class="systasi-skel-cta systasi-skeleton"></div>
+            </div>
+          </div>
+          <div class="systasi-skel-card">
+            <div class="systasi-skel-img systasi-skeleton"></div>
+            <div class="systasi-skel-lines">
+              <div class="systasi-skel-line systasi-skeleton"></div>
+              <div class="systasi-skel-line short systasi-skeleton"></div>
+              <div class="systasi-skel-cta systasi-skeleton"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3g. Modal -->
+    <div class="component-block">
+      <p class="component-block-title">Modal · .systasi-modal (static preview)</p>
+      <div style="position:relative;width:100%;max-width:640px;height:260px;background:rgba(0,0,0,0.6);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+        <div class="systasi-modal" style="position:relative;width:480px;height:220px;transform:scale(1);overflow:hidden;">
+          <button class="systasi-modal__close" style="position:absolute;top:12px;right:12px;width:32px;height:32px;background:rgba(0,0,0,.1);border:none;border-radius:50%;cursor:pointer;font-size:16px;">✕</button>
+          <div style="display:flex;height:100%;">
+            <div style="width:44%;background:#e6f0ff;display:flex;align-items:center;justify-content:center;">
+              <img src="assets/bh-saude-institucional_036a217aca6f.webp" alt="" style="width:100%;height:100%;object-fit:cover;"/>
+            </div>
+            <div style="flex:1;padding:20px;">
+              <span class="systasi-badge" style="margin-bottom:12px;">Empresarial</span>
+              <p class="systasi-card__name" style="font-size:18px;-webkit-line-clamp:unset;overflow:visible;">Porto Saúde PME</p>
+              <p style="font-size:13px;color:#666;margin-top:8px;">Plano de saúde completo para sua empresa</p>
+              <button class="porto-btn porto-btn--primary" style="margin-top:16px;font-size:13px;padding:10px 20px;">Solicitar cotação</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 4 — LAYOUT & SPACING
+───────────────────────────────────────── -->
+<div id="layout" style="background:#f7f9fc;">
+  <div class="ds-section">
+    <p class="ds-section-label">4</p>
+    <h2 class="ds-section-title">Layout &amp; Spacing</h2>
+
+    <!-- Spacing scale (exact tokens) -->
+    <div class="component-block">
+      <p class="component-block-title">Spacing Tokens · --systasi-gap / --systasi-padding = 16px</p>
+      <div class="spacing-scale">
+        <div class="spacing-item"><div class="spacing-bar" style="height:4px;"></div><div class="spacing-label">--radius-sm<br>4px</div></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:8px;"></div><div class="spacing-label">badge-pad<br>8px</div></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:12px;"></div><div class="spacing-label">card-gap<br>12px</div></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:16px;"></div><div class="spacing-label">--systasi-gap<br>16px</div></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:24px;"></div><div class="spacing-label">card-pad<br>24px</div></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:32px;"></div><div class="spacing-label">title-mb<br>32px</div></div>
+        <div class="spacing-item"><div class="spacing-bar" style="height:48px;"></div><div class="spacing-label">title-mb-md<br>48px</div></div>
+      </div>
+    </div>
+
+    <!-- Grid: 3 cols -->
+    <div class="layout-demo">
+      <div class="layout-demo-label">Pattern 1 — Horizontal Grid · .systasi-grid (3 cols → 2 → 1)</div>
+      <div class="layout-demo-inner">
+        <div class="systasi-widget">
+          <div class="systasi-grid">
+            <div class="layout-col">Col 1</div>
+            <div class="layout-col">Col 2</div>
+            <div class="layout-col">Col 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="layout-demo">
+      <div class="layout-demo-label">Pattern 2 — Horizontal Carousel · .systasi-grid--carousel (scroll-snap, 260px cards)</div>
+      <div class="layout-demo-inner" style="overflow:hidden;">
+        <div class="systasi-widget">
+          <div class="systasi-grid systasi-grid--carousel">
+            <div class="layout-col" style="flex:0 0 260px;width:260px;min-height:80px;">Card 1 · 260px</div>
+            <div class="layout-col" style="flex:0 0 260px;width:260px;min-height:80px;">Card 2 · 260px</div>
+            <div class="layout-col" style="flex:0 0 260px;width:260px;min-height:80px;">Card 3 · 260px</div>
+            <div class="layout-col" style="flex:0 0 260px;width:260px;min-height:80px;">Card 4 · 260px</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Split hero layout -->
+    <div class="layout-demo">
+      <div class="layout-demo-label">Pattern 3 — Hero Split · grid 1fr 1fr · gap 48px</div>
+      <div class="layout-demo-inner">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+          <div class="layout-col" style="min-height:80px;">Left: Text + CTAs</div>
+          <div class="layout-col" style="min-height:80px;">Right: Hero Image</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 5 — MOTION & INTERACTION
+───────────────────────────────────────── -->
+<div id="motion" style="background:#fff;">
+  <div class="ds-section">
+    <p class="ds-section-label">5</p>
+    <h2 class="ds-section-title">Motion &amp; Interaction</h2>
+
+    <div class="motion-gallery">
+      <!-- Shimmer -->
+      <div class="motion-card">
+        <div class="motion-card-title">Skeleton Shimmer</div>
+        <div class="motion-card-spec">systasi-shimmer · 1.2s ease-in-out ∞</div>
+        <div class="motion-demo" style="flex-direction:column;gap:8px;align-items:stretch;">
+          <div class="demo-shimmer" style="height:14px;"></div>
+          <div class="demo-shimmer" style="height:14px;width:65%;"></div>
+          <div class="demo-shimmer" style="height:44px;margin-top:4px;"></div>
+        </div>
+      </div>
+
+      <!-- Card hover lift -->
+      <div class="motion-card">
+        <div class="motion-card-title">Card Hover Lift</div>
+        <div class="motion-card-spec">translateY(-4px) · 0.3s ease + box-shadow</div>
+        <div class="motion-demo">
+          <div class="demo-hover-lift">Passe o mouse →</div>
+        </div>
+      </div>
+
+      <!-- CTA arrow -->
+      <div class="motion-card">
+        <div class="motion-card-title">CTA Arrow Shift</div>
+        <div class="motion-card-spec">::after translateX(4px) · 0.2s ease</div>
+        <div class="motion-demo">
+          <button class="demo-cta-arrow">Ver plano</button>
+        </div>
+      </div>
+
+      <!-- Image zoom on card hover -->
+      <div class="motion-card">
+        <div class="motion-card-title">Image Zoom</div>
+        <div class="motion-card-spec">systasi-card__img · scale(1.05) · 0.3s ease</div>
+        <div class="motion-demo" style="overflow:hidden;border-radius:8px;width:100%;height:80px;">
+          <div style="overflow:hidden;width:100%;height:100%;border-radius:8px;">
+            <img src="assets/bh-saude-institucional_036a217aca6f.webp" alt="" class="systasi-card__img" style="height:80px;object-fit:cover;border-radius:0;" title="Hover para ver o zoom"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav button hover -->
+      <div class="motion-card">
+        <div class="motion-card-title">Nav Button Hover</div>
+        <div class="motion-card-spec">bg → accent-light · border → accent · 0.2s ease</div>
+        <div class="motion-demo" style="gap:8px;">
+          <button class="systasi-nav__btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="systasi-nav__btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal scale -->
+      <div class="motion-card">
+        <div class="motion-card-title">Modal Open</div>
+        <div class="motion-card-spec">scale(0.95→1.0) · 0.2s ease · overlay opacity 0→1</div>
+        <div class="motion-demo">
+          <div style="background:#e6f0ff;border:1px solid #0046c0;border-radius:8px;padding:10px 16px;font-size:12px;font-weight:600;color:#0046c0;">transform: scale(0.95 → 1.0)</div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top:32px;font-size:13px;color:#666;background:#f7f9fc;border:1px solid #e0e0e0;border-radius:8px;padding:12px 16px;">
+      <strong>@media (prefers-reduced-motion: reduce)</strong> — Todas as animações de shimmer, hover e transições são desativadas. Componentes exibem estados estáticos.
+    </p>
+  </div>
+</div>
+
+
+<!-- ─────────────────────────────────────────
+     SECTION 6 — ICONS (icomoon)
+───────────────────────────────────────── -->
+<div id="icons" style="background:#f7f9fc;">
+  <div class="ds-section">
+    <p class="ds-section-label">6</p>
+    <h2 class="ds-section-title">Icons · icomoon · icon-porto-ic-*</h2>
+
+    <!-- Size variants -->
+    <div class="component-block">
+      <p class="component-block-title">Size Variants</p>
+      <div class="icon-size-demo" style="margin-bottom:32px;">
+        <div class="icon-size-item">
+          <span class="icon-porto-ic-phone1" style="font-size:16px;color:#0046c0;"></span>
+          <div class="icon-size-label">16px</div>
+        </div>
+        <div class="icon-size-item">
+          <span class="icon-porto-ic-phone1" style="font-size:24px;color:#0046c0;"></span>
+          <div class="icon-size-label">24px</div>
+        </div>
+        <div class="icon-size-item">
+          <span class="icon-porto-ic-phone1" style="font-size:32px;color:#0046c0;"></span>
+          <div class="icon-size-label">32px</div>
+        </div>
+        <div class="icon-size-item">
+          <span class="icon-porto-ic-phone1" style="font-size:48px;color:#0046c0;"></span>
+          <div class="icon-size-label">48px</div>
+        </div>
+        <!-- Color inheritance -->
+        <div style="width:1px;background:#e0e0e0;height:60px;margin:0 8px;"></div>
+        <div class="icon-size-item">
+          <div style="background:#0046c0;border-radius:10px;padding:10px;display:inline-flex;">
+            <span class="icon-porto-ic-phone1" style="font-size:24px;color:#fff;"></span>
+          </div>
+          <div class="icon-size-label">on Primary</div>
+        </div>
+        <div class="icon-size-item">
+          <div style="background:#e6f0ff;border-radius:10px;padding:10px;display:inline-flex;">
+            <span class="icon-porto-ic-phone1" style="font-size:24px;color:#0046c0;"></span>
+          </div>
+          <div class="icon-size-label">on Light</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon grid — all icomoon icons used in Porto -->
+    <div class="component-block">
+      <p class="component-block-title">Full Icon Set · icon-porto-ic-*</p>
+      <div class="icon-grid">
+        <div class="icon-item"><span class="icon-porto-ic-whatsapp1"></span><div class="icon-name">whatsapp1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-call-center"></span><div class="icon-name">call-center</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-instagram1"></span><div class="icon-name">instagram1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-twitter1"></span><div class="icon-name">twitter1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-linkedin1"></span><div class="icon-name">linkedin1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-facebook1"></span><div class="icon-name">facebook1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-youtube1"></span><div class="icon-name">youtube1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-circle-info1"></span><div class="icon-name">circle-info1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-chat1"></span><div class="icon-name">chat1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-phone1"></span><div class="icon-name">phone1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-pin-location1"></span><div class="icon-name">pin-location1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-circle-question1"></span><div class="icon-name">circle-question1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-handshake1"></span><div class="icon-name">handshake1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-pet1"></span><div class="icon-name">pet1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-home1"></span><div class="icon-name">home1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-car-hacht1"></span><div class="icon-name">car-hacht1</div></div>
+        <div class="icon-item"><span class="icon-porto-ic-medal-ribbon1"></span><div class="icon-name">medal-ribbon1</div></div>
+      </div>
+    </div>
+
+    <!-- icomoon font info -->
+    <div style="background:#1a1a1a;border-radius:12px;padding:20px 24px;margin-top:8px;">
+      <p style="font-family:'Courier New',monospace;font-size:12px;color:#4ade80;margin-bottom:8px;">/* Font declaration — assets/icomoon_*.ttf/.woff/.svg */</p>
+      <p style="font-family:'Courier New',monospace;font-size:12px;color:#e6f0ff;line-height:1.8;">
+        font-family: 'icomoon';<br>
+        [class^="icon-"] { font-family: 'icomoon' !important; }<br>
+        Usage: &lt;span class="icon-porto-ic-phone1"&gt;&lt;/span&gt;
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

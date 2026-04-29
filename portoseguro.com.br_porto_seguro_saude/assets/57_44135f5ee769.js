@@ -1,0 +1,2 @@
+(this["webpackJsonpporto-seguro-migracao-de-canais"]=this["webpackJsonpporto-seguro-migracao-de-canais"]||[]).push([[57],{894:function(a,e,s){"use strict";s.r(e);s(3);var t,c=s(2);const r=s(1).d.div(t||(t=Object(c.a)([""])));var o=s(215),i=s(0);e.default=a=>{let{gtmName:e,cards:s}=a;return Object(i.jsx)(r,{children:Object(i.jsx)(o.a,{gtmName:e,cards:s})})}}}]);
+//# sourceMappingURL=57.9da3599b.chunk.js.map

@@ -1,0 +1,1 @@
+var _aaq=window._aaq||(window._aaq=[]);(function(){var a=document,b=a.createElement("script");a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.src=document.location.protocol+"//cdn.evgnet.com/beacon/portoseguro/portoprod/scripts/evergage.min.js";a.parentNode.insertBefore(b,a)})();
