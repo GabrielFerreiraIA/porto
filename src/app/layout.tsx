@@ -36,7 +36,7 @@ export const metadata: Metadata = {
       "Compare e contrate os melhores planos Porto Seguro Saúde. Atendimento 100% gratuito pela Elih Seguros, correspondente autorizado Porto Seguro.",
     images: [
       {
-        url: "/images/porto-og.png",
+        url: "/images/porto-og.svg",
         width: 1200,
         height: 630,
         alt: "Elih Seguros — Porto Seguro Saúde",
