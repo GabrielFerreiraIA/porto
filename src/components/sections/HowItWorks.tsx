@@ -63,7 +63,7 @@ export function HowItWorks() {
 
             <button
               onClick={scrollToForm}
-              className="mt-8 inline-flex items-center gap-2 bg-porto-primary hover:bg-porto-primary-hover text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105 shadow-lg shadow-porto-primary/30"
+              className="mt-8 inline-flex items-center gap-2 bg-porto-primary hover:bg-porto-primary-hover text-white font-bold px-8 py-4 rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-porto-primary/30"
             >
               Começar agora
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +83,7 @@ export function HowItWorks() {
                 transition={{ duration: 0.5, delay: i * 0.12 }}
                 className="flex gap-5"
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-porto-primary flex items-center justify-center">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-porto-primary flex items-center justify-center">
                   <span className="font-porto font-bold text-white text-sm">{step}</span>
                 </div>
                 <div className="pt-1">

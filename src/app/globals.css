@@ -1,33 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Porto Roobert';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/PortoRoobert-Medium_c194db837a28.otf"),
+       url("/fonts/PortoRoobert-Medium_06e47724eff1.ttf");
+}
+@font-face {
+  font-family: 'Porto Roobert';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/PortoRoobert-Medium_c194db837a28.otf"),
+       url("/fonts/PortoRoobert-Medium_06e47724eff1.ttf");
+}
+@font-face {
+  font-family: 'Porto Roobert';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/PortoRoobert-SemiBold_427f25c8ee52.otf"),
+       url("/fonts/PortoRoobert-SemiBold_5a69c36dfa82.ttf");
+}
+@font-face {
+  font-family: 'Porto Roobert';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/PortoRoobert-Bold_eccfc5662093.otf"),
+       url("/fonts/PortoRoobert-Bold_d255a2e31ee2.ttf");
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("/fonts/icomoon_cc035f0788b3.eot");
+  src: url("/fonts/icomoon_4c1a434f9798.eot") format('embedded-opentype'),
+       url("/fonts/icomoon_5540fd2e8644.ttf") format('truetype'),
+       url("/fonts/icomoon_bf4fca28ac4e.woff") format('woff'),
+       url("/fonts/icomoon_80683a3f5d86.svg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /* ── Design Tokens — Porto Seguro Saúde ── */
 :root {
-  --porto-primary:        #0046c0;
-  --porto-primary-dark:   #002a7a;
-  --porto-primary-hover:  #003399;
-  --porto-accent-light:   #e6f0ff;
-  --porto-text:           #1a1a1a;
-  --porto-muted:          #666666;
-  --porto-surface:        #ffffff;
-  --porto-surface-2:      #f7f9fc;
-  --porto-border:         #e0e0e0;
+  --porto-blue:         #0046c0;
+  --porto-blue-dark:    #002a7a;
+  --porto-blue-hover:   #003399;
+  --porto-blue-light:   #e6f0ff;
+  --porto-text:         #1a1a1a;
+  --porto-muted:        #666666;
+  --porto-border:       #e0e0e0;
+  --porto-surface:      #ffffff;
+  --porto-surface-2:    #f7f9fc;
 }
 
 /* ── Tailwind v4 Theme Extension ── */
 @theme inline {
-  --color-porto-primary:        var(--porto-primary);
-  --color-porto-primary-dark:   var(--porto-primary-dark);
-  --color-porto-primary-hover:  var(--porto-primary-hover);
-  --color-porto-accent-light:   var(--porto-accent-light);
+  --color-porto-primary:        var(--porto-blue);
+  --color-porto-primary-dark:   var(--porto-blue-dark);
+  --color-porto-primary-hover:  var(--porto-blue-hover);
+  --color-porto-accent-light:   var(--porto-blue-light);
   --color-porto-text:           var(--porto-text);
   --color-porto-muted:          var(--porto-muted);
   --color-porto-surface:        var(--porto-surface);
   --color-porto-surface-2:      var(--porto-surface-2);
   --color-porto-border:         var(--porto-border);
 
-  --font-porto: 'Raleway', var(--font-inter), system-ui, sans-serif;
-  --font-sans:  var(--font-inter), system-ui, sans-serif;
+  --font-porto: 'Porto Roobert', system-ui, sans-serif;
+  --font-sans:  'Porto Roobert', system-ui, sans-serif;
 }
 
 /* ── Base ── */

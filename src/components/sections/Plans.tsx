@@ -87,7 +87,7 @@ export function Plans() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`plan-card relative rounded-2xl p-6 lg:p-8 flex flex-col ${
+              className={`plan-card relative rounded-xl p-6 lg:p-8 flex flex-col ${
                 featured
                   ? "bg-porto-primary text-white border-2 border-porto-primary shadow-2xl shadow-porto-primary/25"
                   : "bg-porto-surface border border-porto-border"
@@ -161,7 +161,7 @@ export function Plans() {
               {/* CTA */}
               <button
                 onClick={scrollToForm}
-                className={`w-full font-bold py-3.5 rounded-xl text-sm transition-all duration-200 hover:scale-[1.02] ${
+                className={`w-full font-bold py-3.5 rounded-lg text-sm transition-all duration-200 hover:scale-[1.02] ${
                   featured
                     ? "bg-white text-porto-primary hover:bg-porto-accent-light"
                     : "bg-porto-primary text-white hover:bg-porto-primary-hover"

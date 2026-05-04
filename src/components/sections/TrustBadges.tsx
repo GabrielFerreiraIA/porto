@@ -65,7 +65,7 @@ export function TrustBadges() {
               transition={{ duration: 0.4, delay: i * 0.07 }}
               className="flex flex-col items-center text-center gap-2"
             >
-              <div className="w-12 h-12 rounded-2xl bg-porto-accent-light flex items-center justify-center text-porto-primary">
+              <div className="w-12 h-12 rounded-xl bg-porto-accent-light flex items-center justify-center text-porto-primary">
                 {icon}
               </div>
               <p className="font-porto font-bold text-porto-text text-sm">{title}</p>

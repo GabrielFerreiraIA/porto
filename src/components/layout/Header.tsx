@@ -97,7 +97,7 @@ export function Header() {
             </a>
             <button
               onClick={scrollToForm}
-              className="bg-porto-primary hover:bg-porto-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:scale-105 shadow-lg shadow-porto-primary/30"
+              className="bg-porto-primary hover:bg-porto-primary-hover text-white text-sm font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-porto-primary/30"
             >
               Quero Cotação
             </button>
@@ -140,7 +140,7 @@ export function Header() {
               ))}
               <button
                 onClick={scrollToForm}
-                className="w-full bg-porto-primary text-white font-semibold py-3 rounded-xl mt-2"
+                className="w-full bg-porto-primary text-white font-semibold py-3 rounded-lg mt-2"
               >
                 Quero Cotação Gratuita
               </button>

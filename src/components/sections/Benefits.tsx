@@ -92,9 +92,9 @@ export function Benefits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-porto-surface rounded-2xl p-6 border border-porto-border hover:border-porto-primary/30 hover:shadow-lg hover:shadow-porto-primary/5 transition-all duration-300 group"
+              className="bg-porto-surface rounded-xl p-6 border border-porto-border hover:border-porto-primary/30 hover:shadow-lg hover:shadow-porto-primary/5 transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-2xl bg-porto-accent-light flex items-center justify-center text-porto-primary mb-4 group-hover:bg-porto-primary group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-xl bg-porto-accent-light flex items-center justify-center text-porto-primary mb-4 group-hover:bg-porto-primary group-hover:text-white transition-all duration-300">
                 {icon}
               </div>
               <h3 className="font-porto font-bold text-porto-text text-lg mb-2">{title}</h3>
