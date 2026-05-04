@@ -55,7 +55,7 @@ export function Footer() {
                 elihseguros@gmail.com
               </li>
               <li className="flex items-center gap-2">
-                <span className="icon-porto-ic-whatsapp1 text-[#25D366] flex-shrink-0 text-lg"></span>
+                <span className="icon-porto-ic-whatsapp text-[#25D366] flex-shrink-0 text-lg"></span>
                 <a
                   href="https://wa.me/5511999999999"
                   target="_blank"

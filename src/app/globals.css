@@ -56,6 +56,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-porto-ic-whatsapp:before { content: "\e900"; }
+.icon-porto-ic-call-center:before { content: "\e901"; }
+.icon-porto-ic-instagram:before { content: "\e902"; }
+.icon-porto-ic-twitter:before { content: "\e903"; }
+.icon-porto-ic-linkedin:before { content: "\e904"; }
+.icon-porto-ic-facebook:before { content: "\e905"; }
+.icon-porto-ic-youtube:before { content: "\e906"; }
+.icon-porto-ic-circle-info:before { content: "\e907"; }
+.icon-porto-ic-chat:before { content: "\e908"; }
+.icon-porto-ic-phone:before { content: "\e909"; }
+.icon-porto-ic-pin-location:before { content: "\e90a"; }
+.icon-porto-ic-circle-question:before { content: "\e90b"; }
+.icon-porto-ic-handshake:before { content: "\e90c"; }
+.icon-porto-ic-pet:before { content: "\e90d"; }
+.icon-porto-ic-home:before { content: "\e90e"; }
+.icon-porto-ic-car-hacht:before { content: "\e90f"; }
+.icon-porto-ic-medal-ribbon:before { content: "\e910"; }
+.icon-porto-ic-credit-card:before { content: "\e911"; }
+.icon-porto-ic-circle-hospital:before { content: "\e912"; }
+.icon-porto-ic-cards:before { content: "\e913"; }
+.icon-porto-ic-car-alert:before { content: "\e914"; }
+.icon-porto-ic-shopping-cart:before { content: "\e915"; }
+.icon-porto-ic-clock:before { content: "\e941"; }
+.icon-porto-ic-reload:before { content: "\e942"; }
+.icon-porto-ic-exit:before { content: "\e943"; }
+.icon-porto-ic-arrow-left:before { content: "\e944"; }
+
 /* ── Design Tokens — Porto Seguro Saúde ── */
 :root {
   --porto-blue:         #0046c0;

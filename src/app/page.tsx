@@ -29,7 +29,7 @@ export default function Home() {
         className="whatsapp-fab"
         aria-label="Falar no WhatsApp"
       >
-        <span className="icon-porto-ic-whatsapp1 text-3xl text-white"></span>
+        <span className="icon-porto-ic-whatsapp text-3xl text-white"></span>
       </a>
     </>
   );

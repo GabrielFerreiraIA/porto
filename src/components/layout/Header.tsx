@@ -90,7 +90,7 @@ export function Header() {
                 scrolled ? "text-porto-text hover:text-porto-primary" : "text-white/80 hover:text-white"
               }`}
             >
-              <span className="icon-porto-ic-whatsapp1 text-lg"></span>
+              <span className="icon-porto-ic-whatsapp text-lg"></span>
               WhatsApp
             </a>
             <button
